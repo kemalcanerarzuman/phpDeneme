@@ -44,6 +44,7 @@ function createTable($yazarlar){
     echo '<tr><td style="text-align: center"; bgcolor= "yellow">'.$yazarlar[$i]->getName()."</td>";
     echo '<td style="text-align: center"; bgcolor= "yellow">'.$yazarlar[$i]->getSurname()."</td>";
     echo '<td style="text-align: center"; bgcolor= "yellow">'.$yazarlar[$i]->getBirthYear()."</td>";
+    echo '<td style="text-align: center"; bgcolor= "yellow">'.'<a href="yazar_sil.php?index='.$i.'">delete</a> </td>';
     echo '<td style="text-align: center"; bgcolor= "yellow">'.'<a href="yazar_duzenle.php?index='.$i.'">update</a>'."</td> </tr>";
   }
   echo "</tbody>   </table>";
@@ -64,5 +65,9 @@ function finishHTML(){
 function redirect($place){
       header('Location: '.$place);
       exit();
+}
+function deleteAuthor($index, &$yazarlar) {
+  unset($yazarlar[$index]);
+
 }
  ?>

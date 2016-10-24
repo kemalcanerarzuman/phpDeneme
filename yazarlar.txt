@@ -1,10 +1,2 @@
 Abbas,Sayar,1923
-Bedri,Eyub,1913
-Behcet,Necat,1919
-Cahit,Taranci,1910
-Can,Yucel,1926
-Cemal,Su,1931
-Cemil,Meric,1915
-Cenap,Sahab,1870
-Kemal,Tahir,1940
-Second,one,1992
+Cahit Sitki,Tarancı,1914
