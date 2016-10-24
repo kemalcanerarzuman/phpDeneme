@@ -1,6 +1,6 @@
   <?php
 
-    require_once ("functions.php");
+    require_once ("function/functions.php");
     startHTML();
     $yazarlar = readTxtFile("yazarlar.txt");
     if($_POST){

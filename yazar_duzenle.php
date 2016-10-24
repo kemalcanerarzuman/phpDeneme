@@ -1,6 +1,6 @@
 <?php
 //ob_start();
-  require_once("functions.php");
+  require_once("function/functions.php");
     $yazarlar = readTxtFile("yazarlar.txt");
   if($_POST != null) {
     if(!isset($_POST['cancel'])) {
