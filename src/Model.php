@@ -1,6 +1,8 @@
 <?php
+namespace CanerDB;
 
-class Model {
+class Model
+{
 
   protected $fileName = null;
   protected $columns = array();
@@ -35,6 +37,7 @@ class Model {
     }
     return null;
   }
+
   public function create($array) {
     $toAppend;
     if(count($array) == 3) {
@@ -47,13 +50,13 @@ class Model {
   }
 
   public function __call($name, $args = []) {
-/*    if (strpos($name, "findBy") === 0) {
+    if (strpos($name, "findBy") === 0) {
       $column = strtolower(str_replace("findBy", "", $name));
       if (!in_array($column, $this->columns)) throw new Exception("Column $column not found");
       return $this->find($column, $args[0]);
     }
     throw new Exception("Method $name not found");
-*/
+
   }
 
   public function getRows() {
@@ -75,10 +78,9 @@ class Model {
     for($i = 0; $i < count($arr); $i++){
         $columnValues = explode(",",$arr[$i]);
         $columns[] = $columnValues;
-  }
+      }
     return $columns;
   }
-
 
 }
 ?>

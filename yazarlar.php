@@ -1,8 +1,7 @@
 <?php
+  require_once "Autoload.php";
 
-  require_once "Yazar.php";
-
-  $yazar = new Yazar();
+  $yazar = new CanerDB\Model\Yazar();
 
   echo "<pre>";
   //print_r($yazar->findByName("ss"));
@@ -12,8 +11,8 @@
     'surname' => 'dddd',
     'birth_year' => 1995
   ));
-  print_r($yazar->findByName("asdd"));
-  echo $yazar->count();
+//  print_r($yazar->findByName("asdd"));
+  echo $yazar->count()."\n";
 
   echo  $yazar->find('name','ss');
 

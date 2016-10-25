@@ -1,6 +1,6 @@
 <?php
 
-require("Yazar.php");
+require("Autoload.php");
 function startHTML(){
   echo "<html><head><title>Yazarlar</title></head><body>";
 }

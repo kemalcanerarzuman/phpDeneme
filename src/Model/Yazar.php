@@ -1,6 +1,7 @@
 <?php
+namespace CanerDB\Model;
 
-require_once "Model.php";
+use CanerDB\Model;
 
 class Yazar extends Model {
 

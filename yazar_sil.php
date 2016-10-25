@@ -1,5 +1,5 @@
 <?php
-  require_once("function/functions.php");
+  require_once("Autoload.php");
   $yazarlar = readTxtFile("yazarlar.txt");
   deleteAuthor($_GET['index'], $yazarlar);
   writeTXT($yazarlar);
