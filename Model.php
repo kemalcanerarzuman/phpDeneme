@@ -18,6 +18,7 @@ class Model {
       $this->data = $fileSize > 0 ? trim(fread($handle, $fileSize)) : "";
       fclose($handle);
     }
+
     return trim($this->data) != "" ? explode("\n", $this->data) : [];
   }
 
@@ -29,14 +30,8 @@ class Model {
   }
 
   public function find($column=null, $value=null) {
-    if($column || $value){
-      return $this->getRows();
-    } else {
-      foreach ($this->getLines() as $key => $value1) {
-        if($column == $key && $value == $value1) {
-          return $this->getRows()[$key];
-        }
-      }
+    foreach ($this->getRows() as $key => $line) {
+      if (isset($line[$column]) && $line[$column] === $value) print_r($line);
     }
     return null;
   }

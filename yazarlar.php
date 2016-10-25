@@ -15,7 +15,7 @@
   print_r($yazar->findByName("asdd"));
   echo $yazar->count();
 
-  echo  $yazar->find("name","ss");
+  echo  $yazar->find('name','ss');
 
   echo "</pre>";
 

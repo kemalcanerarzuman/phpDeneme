@@ -1,5 +1,3 @@
 ss,sdsd,2332
-aass,sdsd,2344
-asdd,dddd,1995
-asdd,dddd,1995
+aass,ssaa,2344
 asdd,dddd,1995
