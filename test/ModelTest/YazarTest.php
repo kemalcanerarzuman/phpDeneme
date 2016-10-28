@@ -2,7 +2,7 @@
 use CanerDB\Model as cm;
 use CanerDB\Model\Yazar as cmy;
 
-class ModelTest extends PHPUnit_Framework_TestCase
+class YazarTest extends PHPUnit_Framework_TestCase
 {
   public function setUp() {
     $this->model = new cm;
