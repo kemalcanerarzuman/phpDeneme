@@ -7,5 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'CanerDB\\Model' => $baseDir . '/src/Model.php',
+    'CanerDB\\Model\\Kitap' => $baseDir . '/src/Model/Kitap.php',
     'CanerDB\\Model\\Yazar' => $baseDir . '/src/Model/Yazar.php',
 );

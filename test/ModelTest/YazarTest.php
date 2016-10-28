@@ -1,20 +1,20 @@
 <?php
-use CanerDB\Model as cm;
 use CanerDB\Model\Yazar as cmy;
 
 class YazarTest extends PHPUnit_Framework_TestCase
 {
   public function setUp() {
-    $this->model = new cm;
     $this->yazar = new cmy();
   }
 
   public function testCount() {
-    $this->assertEquals(2,$this->yazar->count());
+    $this->assertEquals(3,$this->yazar->count());
   }
 
   public function testGetRows() {
     $this->assertEquals(null, $this->yazar->find());
+    $this->assertEquals(null, $this->yazar->find("name"));
+    $this->assertEquals(null, $this->yazar->find("", "ss"));
   }
 
 }

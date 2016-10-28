@@ -8,6 +8,7 @@ class ComposerStaticInit5979bc1003188684cd304963d64cb3d7
 {
     public static $classMap = array (
         'CanerDB\\Model' => __DIR__ . '/../..' . '/src/Model.php',
+        'CanerDB\\Model\\Kitap' => __DIR__ . '/../..' . '/src/Model/Kitap.php',
         'CanerDB\\Model\\Yazar' => __DIR__ . '/../..' . '/src/Model/Yazar.php',
     );
 
