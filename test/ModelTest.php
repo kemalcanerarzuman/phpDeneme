@@ -6,20 +6,17 @@ class ModelTest extends PHPUnit_Framework_TestCase
 {
   public function setUp() {
     $this->model = new cm;
+    $this->yazar = new cmy();
   }
 
   public function testCount() {
-    $yazar = new cmy();
-    $this->assertEquals(3,$this->model->yazar->count());
+    $this->assertEquals(2,$this->yazar->count());
   }
 
   public function testGetRows() {
-
+    $this->assertEquals(null, $this->yazar->find());
   }
 
 }
-
-
-
 
 ?>

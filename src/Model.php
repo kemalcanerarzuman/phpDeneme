@@ -31,7 +31,7 @@ class Model
     return -1;
   }
 
-  public function find($column=null, $value=null) {
+  public function find($column=null, $value=null) { #tested
     foreach ($this->getRows() as $key => $line) {
       if (isset($line[$column]) && $line[$column] === $value) print_r($line);
     }
@@ -45,7 +45,7 @@ class Model
     }
   }
 
-  public function count() {
+  public function count() { #tested
     return count($this->getLines());
   }
 

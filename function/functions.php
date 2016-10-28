@@ -17,26 +17,26 @@ function readTxtFile ($a) {
   return $yazarlar;
 }
 
-function readPOST($post,$txtFile,$yazarlar) {
+function readPOST($post,$yazarlar) {
 //  global $yazarArray;
-    if($post['name'] != null  && $post['surname'] != null && $post['birth_year'] != null) {
-      if(is_numeric($post['birth_year'])){
-        //file_put_contents($txtFile, $post['name'].",".$post['surname'].",".$post['birth_year']."\n", FILE_APPEND);
-        $yazarlar[] = new Yazar($post['name'],$post['surname'],$post['birth_year']."\n");
-        writeTXT($yazarlar);
-        $post = null;
-      }
+  if($post['name'] != null  && $post['surname'] != null && $post['birth_year'] != null) {
+    if(is_numeric($post['birth_year'])){
+      //file_put_contents($txtFile, $post['name'].",".$post['surname'].",".$post['birth_year']."\n", FILE_APPEND);
+      $yazarlar[] = new Yazar($post['name'],$post['surname'],$post['birth_year']."\n");
+      writeTXT($yazarlar);
+      $post = null;
     }
+  }
   return $post;
 }
-  function writeTXT($yazarlar){
-    $myfile = fopen("yazarlar.txt", "w");
-    foreach ($yazarlar as $yazar) {
-    $txt = $yazar->getName().",".$yazar->getSurname().",".$yazar->getBirthYear();
-    fwrite($myfile, $txt);
-  }
-    fclose($myfile);
-  }
+function writeTXT($yazarlar){
+  $myfile = fopen("yazarlar.txt", "w");
+  foreach ($yazarlar as $yazar) {
+  $txt = $yazar->getName().",".$yazar->getSurname().",".$yazar->getBirthYear();
+  fwrite($myfile, $txt);
+}
+  fclose($myfile);
+}
 
 function createTable($yazarlar){
   echo  '<table border="1" style="width: 25%;" cellpadding="5" cellspacing="5"> <tbody>';
@@ -63,11 +63,11 @@ function finishHTML(){
   echo "</body></html>";
 }
 function redirect($place){
-      header('Location: '.$place);
-      exit();
+  header('Location: '.$place);
+  exit();
 }
 function deleteAuthor($index, &$yazarlar) {
   unset($yazarlar[$index]);
 
 }
- ?>
+?>
