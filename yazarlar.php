@@ -2,23 +2,27 @@
   require_once "Autoload.php";
 
   $yazar = new CanerDB\Model\Yazar();
-  $kitap = new CanerDB\Model\Kitap;
-  $kitap->setBookName("Tutunamayanlar");
+  $kitap = new CanerDB\Model\Kitap();
+//  $kitap->setBookName("Tutunamayanlar");
+//  $kitap->setColumns("Tutunamayanlar", "Oguz");
   echo "<pre>";
   //print_r($yazar->findByName("ss"));
-
-/*  $yazar->create(array(
+/*  $kitap->create(array(
+    'name' => 'sss' ,
+    'author' => 'ddd'
+  ));
+  $yazar->create(array(
     'name' => 'asdd',
     'surname' => 'dddd',
     'birth_year' => 1995
   ));*/
-//  print_r($yazar->findByName("asdd"));
+  print_r($kitap->findByName("Tutunamayanlar"));
+  print_r($yazar->findByName("aass"));
   echo $yazar->count()."\n";
+  echo $kitap->count()."\n";
 
+  echo $kitap->find('name', 'asd');
   echo  $yazar->find('name','Oguz');
-  $yazar->addBook($kitap) ;
-  $yazar->addBook(new CanerDB\Model\Kitap()) ;
-  print_r($yazar->getBooks());
 
   echo "</pre>";
 

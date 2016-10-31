@@ -43,6 +43,9 @@ class Model
     if(count($array) == 3) {
       fwrite(  $this->getHandle("a"), implode(',',$array)."\n");
     }
+    if(count($array) == 2) {
+      fwrite(  $this->getHandle("a"), implode(',',$array)."\n");
+    }
   }
 
   public function count() { #tested
@@ -72,7 +75,7 @@ class Model
     return $returnVal;
   }
 
-  private function setColumnsFromFile(){
+/*  private function setColumnsFromFile(){
     $arr = file("$this->fileName");
     $columns;
     for($i = 0; $i < count($arr); $i++){
@@ -81,6 +84,6 @@ class Model
       }
     return $columns;
   }
-
+*/
 }
 ?>
