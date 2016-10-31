@@ -4,18 +4,28 @@ use CanerDB\Model;
 
 class Kitap extends Model
 {
+
   protected $fileName= "kitaplar.txt";
-  protected $columns = ["name", "author"];
+  protected $columns = ["kitapID","name","yazarID"];
+  protected $id;
 
-  public function setBookName($bookName) {
-    $this->bookName = $bookName;
+  public function yazar($id) {
+    $yazar = new Yazar();
+    $kitapRows = $this->getRows();
+    $rows = $yazar->getRows();
+    $yazarID = null;
+    foreach ($kitapRows as $key => $value) {
+      if($kitapRows[$key]['kitapID'] == $id) {
+      $yazarID = $kitapRows[$key]['yazarID'];
+
+          }
+    }
+    foreach ($rows as $key => $value) {
+      if(trim($rows[$key]["yazarID"]) == trim($yazarID)){
+        return $value;
+      }
+    }
   }
-
-  public function setColumns ($bookName = null, $yazar ) {
-  $columns = array($this->bookName, $yazar);
-}
-
-
 }
 
 ?>

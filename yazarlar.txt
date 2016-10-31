@@ -1,3 +1,7 @@
-ss,sdsd,2332
-aass,ssaa,2344
-Oguz,Atay,1935
+1,Resat Nuri,Guntekin,1932
+2,Sabahattin,Ali,1915
+3,Oguz,Atay,1935
+4,Elif,Safak,1950
+5,Emrah,Serbes,1970
+6,Peyami,Safa,1917
+7,Namik,Kemal,1920

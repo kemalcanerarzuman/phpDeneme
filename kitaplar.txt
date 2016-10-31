@@ -1,6 +1,7 @@
-Tutunamayanlar,Oguz Atay
-Calikusu,Resat Nuri Guntekin
-asd,das
-qwe,eqw
-123,312
-sss,ddd
+1000,Tutunamayanlar,3
+1001,Calikusu,1
+1002,Kurk Mantolu Madonna,2
+1003,Muptezeller,5
+1004,Ask,4
+1005,Vatan Yahut Silistre,7
+1006,9. Hariciye Kogusu,6

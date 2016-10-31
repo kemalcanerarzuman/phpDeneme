@@ -6,6 +6,7 @@ class Model
 
   protected $fileName = null;
   protected $columns = array();
+  protected $id;
 
   private $data = null;
 
@@ -40,12 +41,16 @@ class Model
 
   public function create($array) {
     $toAppend;
+    $newID = count($this->getLines());
     if(count($array) == 3) {
-      fwrite(  $this->getHandle("a"), implode(',',$array)."\n");
+      fwrite(  $this->getHandle("a"),($newID+1).",".implode(',',$array)."\n");
     }
     if(count($array) == 2) {
-      fwrite(  $this->getHandle("a"), implode(',',$array)."\n");
+      fwrite(  $this->getHandle("a"),($newID+1000).",".implode(',',$array)."\n");
     }
+  }
+  public function getLastID() {
+    return filesize($this->fileName)+1;
   }
 
   public function count() { #tested

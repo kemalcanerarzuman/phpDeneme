@@ -8,7 +8,7 @@ class YazarTest extends PHPUnit_Framework_TestCase
   }
 
   public function testCount() {
-    $this->assertEquals(3,$this->yazar->count());
+    $this->assertEquals(7,$this->yazar->count());
   }
 
   public function testGetRows() {

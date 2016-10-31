@@ -3,30 +3,25 @@
 
   $yazar = new CanerDB\Model\Yazar();
   $kitap = new CanerDB\Model\Kitap();
-//  $kitap->setBookName("Tutunamayanlar");
-//  $kitap->setColumns("Tutunamayanlar", "Oguz");
+
   echo "<pre>";
-  //print_r($yazar->findByName("ss"));
-/*  $kitap->create(array(
-    'name' => 'sss' ,
-    'author' => 'ddd'
-  ));
-  $yazar->create(array(
-    'name' => 'asdd',
-    'surname' => 'dddd',
-    'birth_year' => 1995
-  ));*/
+
   print_r($kitap->findByName("Tutunamayanlar"));
-  print_r($yazar->findByName("aass"));
+  print_r($yazar->findByName("Namik"));
   echo $yazar->count()."\n";
   echo $kitap->count()."\n";
 
-  echo $kitap->find('name', 'asd');
-  echo  $yazar->find('name','Oguz');
-
+//  $kitap->create(array("dca","3"));
+//  echo $kitap->find('name', 'dca');
+//  echo $yazar->find('name','Resat Nuri');
+//  echo $kitap->indexOf('name', 'Calikusu');
+  print_r($yazar->kitaplar(5));
+  echo "<br>";
+  print_r($kitap->yazar(1005));
+  echo "<br>";
   echo "</pre>";
 
-/*
+  /*
   require_once ("function/functions.php");
   startHTML();
   $yazarlar = readTxtFile("yazarlar.txt");
